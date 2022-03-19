@@ -9,7 +9,6 @@
     </head>
     <body>
         @section('sidebar')
-        BARRA SUPERIOR
         @show
         <div class="container">
             @yield('content')

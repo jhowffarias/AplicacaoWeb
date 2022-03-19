@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,4 +34,13 @@ Route::get('/home', function () {
                         'compras2' => [  ['produto' => 'Chocolate'],
                                         ['produto' => 'Leite'],
                                         ['produto' => 'Sabonete']]]);
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('clientes')->group(function(){
+    
+    Route::get('/listar', 
+    [App\Http\Controllers\ClientesController::class, 'listar'])->middleware('auth');
 });

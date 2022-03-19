@@ -1,25 +1,26 @@
-@extends('layouts.home')
-
-@section('title', 'Bem vindo ao meu site')
-
-@section('sidebar')
-    @parent
-        <h1>Lista de compras</h1>
-        <hr>
-@endsection
+@extends('layouts.app')
 
 @section('content')
-<table class="table">
-        <tr><td>Lista de compras do Mercado {{$mercado}}</td></tr>
-    @foreach($compras as $produto)
-        <tr><td>Comprar - > {{$produto['produto']}}<br></td></tr>
-</table>
-    @endforeach
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
-    <table class="table">
-        <tr><td>Lista de compras do Mercado {{$mercado2}}</td></tr>
-    @foreach($compras2 as $produto)
-        <tr><td>Comprar - > {{$produto['produto']}}<br></td></tr>
-</table>
-    @endforeach
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('Bem vindo! Você esta logado') }}
+                    &nbsp;
+                    <a href="/clientes/listar">Veja a Lista de Clientes</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
