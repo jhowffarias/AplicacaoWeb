@@ -22,7 +22,7 @@ class SeederUserAdmin extends Seeder
                               'email' => 'jonathan@hotmail.com',
                               'password' => bcrypt('Senha')]);
         $role = Role::create(['name' => 'Admin']);
-        $permission = Permission::pluck('id', 'id')->all();
+        $permissions = Permission::pluck('id','id')->all();
         $role->syncPermissions($permissions);
         $user->assignRole([$role->id]);
     }
