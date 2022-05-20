@@ -14,12 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('Bem vindo! Você esta logado') }}
+                    {{ __('You are logged in!') }}
                     &nbsp;
-                    <!-- <a href="/clientes/listar">Veja a Lista de Clientes</a> -->
-                    <a href="/clientes">Veja a Lista de Clientes</a>
-
-
+                    <a href="/clients">Clientes</a>
+                    &nbsp;
+                    <a href="/users">Usuários</a>
+                    &nbsp;
+                    <a href="/roles">Perfis</a>
                 </div>
             </div>
         </div>
