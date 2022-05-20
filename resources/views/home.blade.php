@@ -16,7 +16,9 @@
 
                     {{ __('Bem vindo! Você esta logado') }}
                     &nbsp;
-                    <a href="/clientes/listar">Veja a Lista de Clientes</a>
+                    <!-- <a href="/clientes/listar">Veja a Lista de Clientes</a> -->
+                    <a href="/clientes">Veja a Lista de Clientes</a>
+
 
                 </div>
             </div>
